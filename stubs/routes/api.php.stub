@@ -1,0 +1,28 @@
+// Start OxygenPushNotifications API Routes
+Route::group([
+	'prefix' => 'v1',
+	'middleware' => ['auth.api'],
+	'namespace' => '\App\Http\Controllers\API\V1'
+], function() {
+
+	if (config('features.api_active')) {
+
+		// subscribe the device to the the database - you don't need to be a user to subscribe
+		// if you're registering users at the time of login, you can remove this call for better security
+		Route::post('/subscribe', 	  'PushNotificationsAPIController@subscribe');
+
+		// get a list of notifications for the device
+        Route::get ('/notifications', 'PushNotificationsAPIController@index');
+
+        // mark a notification as read
+        Route::post('/notifications/{uuid}/mark-read', 'PushNotificationsAPIController@markRead');
+
+		// logged-in users
+		Route::group(['middleware' => ['auth.api.logged-in']], function() {
+			// if there are user account specific notifications, add them here
+			// don't add user specific notifications to generic users, because more than 1 user may use the same device
+		});
+	}
+
+});
+// End OxygenPushNotifications API Routes
