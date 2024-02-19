@@ -5,7 +5,7 @@
     "repositories": [
         {
             "type":"vcs",
-            "url":"git@bitbucket.org:elegantmedia/formation.git"
+            "url":"https://github.com/keen2work/formation.git"
         },
         {
             "type":"vcs",
@@ -13,19 +13,19 @@
         },
         {
             "type": "vcs",
-            "url": "git@bitbucket.org:elegantmedia/laravel-helpers.git"
+            "url": "https://github.com/keen2work/laravel-helpers.git"
         },
         {
             "type": "vcs",
-            "url": "git@bitbucket.org:elegantmedia/php-helpers.git"
+            "url": "https://github.com/keen2work/php-helpers.git"
         },
         {
             "type": "vcs",
-            "url": "git@bitbucket.org:elegantmedia/devices-laravel.git"
+            "url": "https://github.com/keen2work/devices-laravel.git"
         },
         {
             "type":"vcs",
-            "url":"git@bitbucket.org:elegantmedia/lotus.git"
+            "url":"https://github.com/keen2work/lotus.git"
         }
     ],
     "require": {
